@@ -1,29 +1,24 @@
-"""
-3都府県のいくつかの駅名とある日の最高気温のデータを辞書として持っています
-このデータを使って3つの問を満たす実装をしてください
-def main():
-    # 3都府県のいくつかの駅名とある日の最高気温(単位: ℃)のデータを辞書として持っています
-    weather_information = [
-        {'prefecture': '東京都', 'station': '渋谷', 'temperature': 6.5},
-        {'prefecture': '東京都', 'station': '池袋', 'temperature': 7.0},
-        {'prefecture': '東京都', 'station': '新橋', 'temperature': 7.5},
+weather_information = [
+    {'prefecture': '東京都', 'station': '渋谷', 'temperature': 6.5},
+    {'prefecture': '東京都', 'station': '池袋', 'temperature': 7.0},
+    {'prefecture': '東京都', 'station': '新橋', 'temperature': 7.5},
 
-        {'prefecture': '大阪府', 'station': '梅田', 'temperature': 8.2},
-        {'prefecture': '大阪府', 'station': '大阪', 'temperature': 9.3},
-        {'prefecture': '大阪府', 'station': '堺', 'temperature': 9.5},
+    {'prefecture': '大阪府', 'station': '梅田', 'temperature': 8.2},
+    {'prefecture': '大阪府', 'station': '大阪', 'temperature': 9.3},
+    {'prefecture': '大阪府', 'station': '堺', 'temperature': 9.5},
 
-        {'prefecture': '福岡県', 'station': '博多', 'temperature': 13.0},
-        {'prefecture': '福岡県', 'station': '太宰府', 'temperature': 15.0},
-    ]
+    {'prefecture': '福岡県', 'station': '博多', 'temperature': 13.0},
+    {'prefecture': '福岡県', 'station': '太宰府', 'temperature': 15.0},
+]
 
-    # Q1. 全国の平均気温を計算してください(9.5となればOK)
+# Q1. 全国の平均気温を計算してください(9.5となればOK)
+todohuken_t = [todouhuken["temperature"] for todouhuken in weather_information]
+print(sum(todohuken_t) / len(weather_information))
 
-    # Q2. 大阪府のすべての駅名をカンマ区切りで出力してください( '梅田,大阪,堺' となればOK)
+# Q2. 大阪府のすべての駅名をカンマ区切りで出力してください( '梅田,大阪,堺' となればOK)
+todouhuken_s = [todouhuken["station"] for todouhuken in weather_information[3:6]]
+print(todouhuken_s)
 
-    # Q3. 福岡県の平均気温を計算してください(14.0となればOK)
-
-
-if __name__ == '__main__':
-    main()
-"""
-# 辞書からtemperatureのvalueを複数取り出すのが分からないです。おしえてください。
+# Q3. 福岡県の平均気温を計算してください(14.0となればOK)
+fukuoka_tem = [todouhuken["temperature"] for todouhuken in weather_information[6:9]]
+print((sum(fukuoka_tem)) / (len([todouhuken["prefecture"] for todouhuken in weather_information[6:9]])))

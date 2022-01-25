@@ -21,5 +21,5 @@ for count1 in range(1, int(number1) + 1):
 
         print(str(count2) + '×' + str(count1) + '=' + str(result).rjust(2) + '|', end=' ')
 
-        print()
+    print()
 # 　end=''で横並びがうまくできない
