@@ -32,7 +32,16 @@ def saidai():
     return max_s
 
 
+def saisyo():
+    min_s = scores[0]
+    for score in scores:
+        if score < min_s:
+            min_s = score
+    return min_s
+
+
 scores = list(map(int, input("入力").split()))
 
 print("合計値:" + str(goukei()))
 print("最大値:" + str(saidai()))
+print("最小値:" + str(saisyo()))

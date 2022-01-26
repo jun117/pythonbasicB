@@ -20,3 +20,14 @@ def saidai():
 
 
 print(saidai())
+
+
+def saisyo():
+    min_s = scores[0]
+    for score in scores:
+        if score < min_s:
+            min_s = score
+    return min_s
+
+
+print(saisyo())
