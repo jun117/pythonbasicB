@@ -45,13 +45,13 @@ def heikin():
     for score in scores:
         score_sum = score_sum + score
 
-    result = int(score_sum) / len(scores)
+    result = int(score_sum) // len(scores)
     return result
 
 
 scores = list(map(int, input("入力").split()))
 
-print("合計値:" + str(goukei()))
-print("最大値:" + str(saidai()))
-print("最小値:" + str(saisyo()))
-print("平均値:" + str(heikin()))
+print(" 合計値: " + str(goukei()))
+print(" 最大値: " + str(saidai()))
+print(" 最小値: " + str(saisyo()))
+print(" 平均値: " + str(heikin()))

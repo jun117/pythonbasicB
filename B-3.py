@@ -19,7 +19,7 @@ for count1 in range(1, int(number1) + 1):
     for count2 in range(1, int(number2) + 1):
         result = count2 * count1
 
-        print(str(count2) + '×' + str(count1) + '=' + str(result).rjust(2) + '|', end=' ')
+        print(str(count2) + '　×　' + str(count1) + '　=　' + str(result).rjust(2) + '　|　', end=' ')
 
     print()
 # 　end=''で横並びがうまくできない

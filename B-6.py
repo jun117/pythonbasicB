@@ -26,8 +26,9 @@ def square():
 
 number1 = input('サイコロの面数は？：')
 number2 = input('何回振りますか？：')
-
+l = []
 for num in range(int(number2)):
+    l.append(square())
     # この場合forの後ろの変数はどういう意味があるのでしょか？下のprintを繰り返させるだけすか？
 
-    print(square(), end=',')
+print(l)
