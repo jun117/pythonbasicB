@@ -31,3 +31,9 @@ def saisyo():
 
 
 print(saisyo())
+
+score_sum = 0
+for score in scores:
+    score_sum = score_sum + score
+    result = score_sum / (len(score) - 1)
+print(result)
