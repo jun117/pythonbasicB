@@ -13,25 +13,26 @@
 最小値: 1
 平均値: 6
 """
-# result=input('データを入力してください>').split(",")
 
-# print(result)
 
-# i = list(map(int, input("入力待ち画面に出力するメッセージ").split(",")))
-# print(i) # i変数の中身を出力
+def goukei():
+    score_sum = 0
+    for score in scores:
+        score_sum = score_sum + score
+    return score_sum
 
-# 例)入力：s_1 s_2
 
-# -*- coding: utf-8 -*-
+# splitで文字列を区切り文字を分割しリスト化
+
+def saidai():
+    max_s = 0
+    for score in scores:
+        if max_s < score:
+            max_s = score
+    return max_s
+
 
 scores = list(map(int, input("入力").split()))
 
-score_sum = 0
-
-for score in scores:
-    score_sum = score_sum + score
-
-print(f'10人の点数の合計は、{score_sum}')
-
-# 入力値：1,2,3
-# 実行結果：['1', '2', '3']
+print("合計値:" + str(goukei()))
+print("最大値:" + str(saidai()))
