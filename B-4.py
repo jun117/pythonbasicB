@@ -17,7 +17,7 @@ print(sum(todohuken_t) / len(weather_information))
 
 # Q2. 大阪府のすべての駅名をカンマ区切りで出力してください( '梅田,大阪,堺' となればOK)
 todouhuken_s = [todouhuken["station"] for todouhuken in weather_information[3:6]]
-print(",".join(todouhuken_s))
+print("'" + ",".join(todouhuken_s) + "'")
 
 # Q3. 福岡県の平均気温を計算してください(14.0となればOK)
 fukuoka_tem = [todouhuken["temperature"] for todouhuken in weather_information[6:9]]
